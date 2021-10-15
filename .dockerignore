@@ -1,0 +1,14 @@
+.git
+
+/node_modules
+
+.dockerignore
+.editorconfig
+.gitignore
+
+/e2e
+
+
+*.zip
+
+*.md

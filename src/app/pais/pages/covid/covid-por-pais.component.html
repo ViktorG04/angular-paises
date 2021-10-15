@@ -1,0 +1,44 @@
+<p>Datos Covid</p>
+
+<hr />
+
+<div class="row">
+  <div class="col">
+    <form (ngSubmit)="buscar()" autocomplete="off">
+      <input
+        type="text"
+        name="pais"
+        class="form-control"
+        [(ngModel)]="pais"
+        placeholder="Ingrese nombre pais"
+      />
+    </form>
+  </div>
+</div>
+
+<div *ngIf="error" class="alert alert-danger">
+  No encontramos el pais buscado !!!!! con el termino !!!
+</div>
+
+<div *ngIf="!error" class="row">
+  <div class="col">
+    <table class="table table-hover">
+      <thead>
+        <th>Nombre</th>
+        <th>Casos Confirmados</th>
+        <th>Decesos</th>
+        <th>Tasa de incidencia</th>
+        <th>Tasa de Mortalidad</th>
+      </thead>
+      <tbody>
+        <td>{{listPais.Country_Region }}</td>
+        <td>{{listPais.Confirmed}}</td>
+        <td>{{listPais.Deaths}}</td>
+        <td>{{listPais.Incident_Rate}}</td>
+        <td>{{listPais.Mortality_Rate}}</td>
+      </tbody>
+          
+
+    </table>
+  </div>
+</div>
